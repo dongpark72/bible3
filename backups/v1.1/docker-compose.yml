@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  bible-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: bible-frontend
+    ports:
+      - "8005:80"
+    restart: always
+
+  bible-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.backend
+    container_name: bible-backend
+    ports:
+      - "8085:3000"
+    volumes:
+      - /volume1/docker/bible/server/db.json:/app/server/db.json
+    restart: always

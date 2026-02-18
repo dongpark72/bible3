@@ -1,0 +1,7 @@
+# Frontend Dockerfile
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+# Remove backend and other unnecessary files from frontend image
+RUN rm -rf /usr/share/nginx/html/server /usr/share/nginx/html/Dockerfile* /usr/share/nginx/html/docker-compose.yml
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

@@ -1,0 +1,25 @@
+{
+    "name": "bible3",
+    "main": "workers/index.js",
+    "compatibility_date": "2026-02-18",
+    "assets": {
+        "directory": "./public",
+        "binding": "ASSETS"
+    },
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "bible-db",
+            "database_id": "d06f980b-4553-427c-93e2-4e24a3a99d08"
+        }
+    ],
+    "r2_buckets": [
+        {
+            "binding": "BIBLE_R2",
+            "bucket_name": "bible-assets"
+        }
+    ],
+    "observability": {
+        "enabled": true
+    }
+}

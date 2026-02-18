@@ -1,0 +1,13 @@
+{
+    "name": "bible",
+    "version": "1.0.0",
+    "description": "Bible Web App",
+    "scripts": {
+        "build": "mkdir -p public && cp index.html styles.css sw.js manifest.json public/ && cp -r js assets icons data public/",
+        "deploy": "wrangler deploy",
+        "db-init": "wrangler d1 execute bible-db --file=workers/schema.sql --remote -y"
+    },
+    "devDependencies": {
+        "wrangler": "^3.0.0"
+    }
+}
