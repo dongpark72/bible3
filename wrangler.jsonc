@@ -3,7 +3,7 @@
     "main": "workers/index.js",
     "compatibility_date": "2026-02-18",
     "assets": {
-        "directory": "./public",
+        "directory": "./dist",
         "binding": "ASSETS"
     },
     "d1_databases": [
